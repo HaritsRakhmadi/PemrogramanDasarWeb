@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+
+body{
+    background-image: url(images/skyII.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#myH1{
+    text-align: center;
+    margin-top: 20px;
+    color: hsl(30, 25%, 91%);
+}
+
+.table-container{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background-color: hsl(240, 3%, 94%);
+    margin: auto;
+    border-radius: 10px;
+    max-width: fit-content;
+}
+
+td img{
+    width: 36px;
+    height: 36px;
+    margin: .5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+th{
+    background-color: hsl(0, 0%, 91%);
+}
+
+td, th{
+    padding: 10px;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+label:hover{
+    background-color: rgb(186, 183, 183);
+    cursor: pointer;
+}
+
+#tablePlusBtn{
+    display: flex;
+    justify-content: right;
+    
+}
+
+#plusBtn{
+    border: none;
+}
+
+.overlayForm {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 
+        top 500ms ease-in-out, 
+        opacity 500ms ease-in-out, 
+        height 0ms ease-in-out 500ms;
+}
+
+.overlayForm table{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.overlayForm.activeForm {
+    top: 0;
+    opacity: 1;
+    height: 100%;
+    visibility: visible;
+    
+}
+
+.overlayForm td, .overlayForm th{
+    padding: 15px 15px 15px 15px;
+    margin-top: 0px;
+}
+
+#formCloseBtn{
+    font-size: 30px;
+}
+
+#closeBtn{
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    position: absolute;
+}
+
+#submitBtn, #resetBtn{
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    border-radius: 3px;
+    background-color: green;
+    color: #fff;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    padding: 5px;
+    font-size: large;
+   
+}
+
+#resetBtn{
+    background-color: red;
+}
+

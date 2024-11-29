@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+    <body>
+        <div id="myH1">
+            <h1>Mrs. Puffs's Boating School</h1>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>NPM</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Alamat</th>
+                    <th>Kehadiran</th>
+                    <th>Aksi</th>
+                </tr>
+                <tr>
+                    <td>20240001</td>
+                    <td>Spongebob Squarepants</td>
+                    <td>Spongebob.Squarepants@Boatingschool.ac.com</td>
+                    <td>Jl. Bikini Bottom No.1</td>
+                    <td>
+                        <label for="hadir_1" id="hadirBtn_1">
+                            <input type="radio" id="hadir_1" name="presentOrNot20240001" value="hadir">
+                            ✅ Hadir
+                        </label>
+                        <label for="absen_1" id="absenBtn_1">
+                            <input type="radio" id="absen_1" name="presentOrNot20240001" value="absen">
+                            ❌ Absen
+                        </label>
+                    </td>
+                    <td>
+                        <Label>
+                            <input type="button" id="editBtn" onclick="editFunc(this)">Edit
+                        </Label>
+                        <Label>
+                            <input type="button" id="deleteBtn" onclick="deleteFunc(this)">Delete
+                        </Label>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <label for="plusBtn" id="tablePlusBtn">
+                            <input type="button" id="plusBtn" onclick="addFunc()">
+                            ➕
+                        </label>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+        <!-- Form Mahasiswa Baru -->
+
+        <div class="overlayForm">
+            <form action="">
+                <table>
+                    
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                        <label for="closeBtn" id="formCloseBtn">
+                            <input type="button" id="closeBtn" onclick="closeFunc()">X
+                        </label>
+                    </td>
+                    <tr>
+                        <td>NPM: </td>
+                        <td><input type="number" placeholder="Enter NPM" name="NPMMahasiswa"></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Nama: </td>
+                        <td><input type="text" placeholder="Enter Nama" name="NamaMahasiswa"></td>
+                    </tr>
+                    <tr>
+                        <td>Email: </td>
+                        <td><input type="email" placeholder="Enter Email" name="EmailMahasiswa"></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat: </td>
+                        <td><input type="text" placeholder="Enter Alamat" name="alamatMahasiswa"></td>
+                    </tr>
+                    <tr>
+                       <td>     
+                            <label for="resetBtn">
+                                <input type="reset" id="resetBtn" value="Reset">
+                            </label>
+                        </td>
+                        <td>
+                            <label for="submitBtn">
+                                <input type="Submit" id="submitBtn" value="Submit">
+                            </label>
+                        </td>
+                        </tr>
+                </table>
+            </form>   
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
